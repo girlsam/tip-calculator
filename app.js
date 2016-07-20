@@ -4,5 +4,7 @@ $(document).ready(function() {
 $('form').submit(function(event) {
   event.preventDefault();
   var subTotal = parseInt($('#amount').val());
-  $('.result').append('<h1 class="text-center">' + "You should tip $" + parseFloat(subTotal * 0.2).toFixed(2) + "." + '<h1>');
+  var tipAmount = $('#howMuch').val();
+  $('.result').append('<h1 class="text-center">' + "You should tip $" + parseFloat(subTotal * tipAmount).toFixed(2) + "." + '<h1>');
+});
 });
